@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
               right: 0,
               child: Container(
                 padding: EdgeInsets.only(left: 20.0, right: 10.0),
-                height: MediaQuery.of(context).size.height * 0.22,
+                height: MediaQuery.of(context).size.height * 0.17,
                 decoration: BoxDecoration(
                     color: Color(0xff6e78f7),
                     borderRadius: BorderRadius.only(
@@ -131,7 +131,7 @@ class _HomeState extends State<Home> {
             Positioned(
               left: 0,
               right: 0,
-              top: MediaQuery.of(context).size.height * 0.18,
+              top: MediaQuery.of(context).size.height * 0.13,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
@@ -274,7 +274,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.36),
+              margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.32),
               height: MediaQuery.of(context).size.height*0.67,
 
               width: double.infinity,
@@ -285,17 +285,15 @@ class _HomeState extends State<Home> {
                     height: 200,
                     child: ListView(
                       shrinkWrap: true,
-
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         Container(
-                          
-                          margin: EdgeInsets.only(right: 10.0),
+                          margin: EdgeInsets.only(right: 15.0),
                           height: 100,
                           width: MediaQuery.of(context).size.width*0.85,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                            color: Colors.red,
+                            image: DecorationImage(image: AssetImage('assets/img/first_one.jpg'),fit: BoxFit.fill)
                           ),
 
                         ),
@@ -305,13 +303,191 @@ class _HomeState extends State<Home> {
                           width: MediaQuery.of(context).size.width*0.85,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                            color: Colors.red,
+                              image: DecorationImage(image: AssetImage('assets/img/first_two.jpg'),fit: BoxFit.fill)
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 20.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text('Doctor nearby you',style: TextStyle(fontWeight: FontWeight.bold,color: Color(0xff313450),fontSize: 17.0),),
+                            Text('See All',style: TextStyle(color: Color(0xff6e78f7),fontSize: 14.0,fontWeight: FontWeight.bold),)
+                          ],
+                        ),
+                        SizedBox(height: 10.0,),
+                        Container(
+                          height: 180,
+                          child:
+                          ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: <Widget>[
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 20.0),
+                                width: 170,
+                                child: Stack(
+                                    alignment: Alignment.center,
+                                    children: <Widget>[
+                                     Container(
+                                       margin: EdgeInsets.only(top: 40.0),
+                                       padding: EdgeInsets.only(top: 40.0,left: 10.0,right: 10.0),
+                                       decoration: BoxDecoration(
+                                         color: Colors.white,
+                                         borderRadius: BorderRadius.all(Radius.circular(20.0))
+                                       ),
+                                       child:  Column(
+                                         crossAxisAlignment: CrossAxisAlignment.center,
+                                         children: <Widget>[
+                                           Text(
+                                             'Dr.Alina James',
+                                             style: TextStyle(
+                                                 fontWeight: FontWeight.bold,fontSize: 14.0
+                                             ),
+                                           ),
+                                           SizedBox(height: 10.0,),
+                                           ConstrainedBox(
+                                             constraints: BoxConstraints(maxWidth: 170,minHeight: 30),
+                                             child: Text('B.Sc, MBBS, DDVL, MD-Dermitologist',style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
+                                           ),
+                                           SizedBox(height: 10.0,),
+                                           Row(
+                                             mainAxisAlignment: MainAxisAlignment.start,
+                                             children: <Widget>[
+                                               Icon(Icons.star,color: Colors.orange,),
+                                               Text('4.2')
+                                             ],
+                                           )
+                                         ],
+                                       ),
+                                     ),
+                                      Positioned(
+                                        top:0,
+
+                                        child:  CircleAvatar(
+                                          backgroundImage: AssetImage('assets/img/avatar1.jpg'),
+                                          radius: 30.0,
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 20.0),
+                                width: 170,
+                                child: Stack(
+                                  alignment: Alignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(top: 40.0),
+                                      padding: EdgeInsets.only(top: 40.0,left: 10.0,right: 10.0),
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.all(Radius.circular(20.0))
+                                      ),
+                                      child:  Column(
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            'Dr.Steve Robert',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,fontSize: 14.0
+                                            ),
+                                          ),
+                                          SizedBox(height: 10.0,),
+                                          ConstrainedBox(
+                                            constraints: BoxConstraints(maxWidth: 170,minHeight: 30),
+                                            child: Text('B.Sc, MBBS, DDVL',style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
+                                          ),
+                                          SizedBox(height: 10.0,),
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: <Widget>[
+                                              Icon(Icons.star,color: Colors.orange,),
+                                              Text('3.2')
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Positioned(
+                                      top:0,
+
+                                      child:  CircleAvatar(
+                                        backgroundImage: AssetImage('assets/img/avatar2.jpg'),
+                                        radius: 30.0,
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 20.0),
+                                width: 170,
+                                child: Stack(
+                                  alignment: Alignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(top: 40.0),
+                                      padding: EdgeInsets.only(top: 40.0,left: 10.0,right: 10.0),
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.all(Radius.circular(20.0))
+                                      ),
+                                      child:  Column(
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            'Dr.Senilla Noah',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,fontSize: 14.0
+                                            ),
+                                          ),
+                                          SizedBox(height: 10.0,),
+                                          ConstrainedBox(
+                                            constraints: BoxConstraints(maxWidth: 170,minHeight: 30.0),
+                                            child: Text('B.Sc, MBBS, DDVL,',style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
+                                          ),
+                                          SizedBox(height: 10.0,),
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: <Widget>[
+                                              Icon(Icons.star,color: Colors.orange,),
+                                              Text('4.7')
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Positioned(
+                                      top:0,
+
+                                      child:  CircleAvatar(
+                                        backgroundImage: AssetImage('assets/img/avatar3.jpg'),
+                                        radius: 30.0,
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         )
                       ],
                     ),
                   )
-
                 ],
               ),
             ),
@@ -323,7 +499,7 @@ class _HomeState extends State<Home> {
                 length: 3,
                 child: Container(
                     padding: EdgeInsets.symmetric(vertical: 20.0),
-                    height: MediaQuery.of(context).size.height*0.13,
+                    height: MediaQuery.of(context).size.height*0.11,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
