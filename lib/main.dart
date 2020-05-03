@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterui/screen/home.dart';
+import 'package:flutterui/screen/profile.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,6 +24,9 @@ class MyApp extends StatelessWidget {
 
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        'profile':(context)=>ProfileScreen()
+      },
     );
   }
 }

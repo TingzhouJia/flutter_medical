@@ -66,13 +66,18 @@ class _MyAccountState extends State<MyAccount> {
                   SizedBox(
                     height: 20.0,
                   ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 15.0,vertical: 7.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      border: Border.all(color: Colors.white)
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, 'profile');
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 15.0,vertical: 7.0),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                          border: Border.all(color: Colors.white)
+                      ),
+                      child: Text('Complete you profile',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),),
                     ),
-                    child: Text('Complete you profile',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),),
                   )
                 ],
               ),
